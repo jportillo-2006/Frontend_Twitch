@@ -1,3 +1,4 @@
+
 export const Input = ({
     field,
     label,
@@ -25,7 +26,7 @@ export const Input = ({
         </div>
         <div>
             {textArea ? (
-                <textArea
+                <textarea
                     type={type}
                     value={value}
                     onChange={handleValueChange}
@@ -34,10 +35,10 @@ export const Input = ({
                     style={{maxWidth: '400px'}}
                 />
             ) : (
-                <Input
-                    type="text"
+                <input 
+                    type={type}
                     value={value}
-                    onChange={handleInputBlur}
+                    onChange={handleValueChange}
                     onBlur={handleInputBlur}
                 />
             )}
